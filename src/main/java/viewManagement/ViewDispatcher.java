@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class ViewDispatcher {
     private static final String FXML_SUFFIX = ".fxml";
-    private static final String RESOURCE_BASE = "/viste/";
+    private static final String RESOURCE_BASE = "/views/";
     private static ViewDispatcher instance = new ViewDispatcher();
 
     private Stage stage;
@@ -28,7 +28,7 @@ public class ViewDispatcher {
 
     public void loginView(Stage stage) throws ViewException {
         this.stage = stage;
-        Parent loginView = loadView("login").getView();
+        Parent loginView = loadView("login-view").getView();
         Scene scene = new Scene(loginView);
         stage.setScene(scene);
         stage.show();
@@ -70,6 +70,7 @@ public class ViewDispatcher {
             View<T> view = loadView(viewName);
             DataInitializable<T> controller = view.getController();
             controller.initializeData(data);
+            // RICORDA: il problema sta in LoggedIn() perché anora non hai strutturato il domain con "studente/docente"
             layout.setCenter(view.getView());
         } catch (ViewException e) {
             renderError(e);

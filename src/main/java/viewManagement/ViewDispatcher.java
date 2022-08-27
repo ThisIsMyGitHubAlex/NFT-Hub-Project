@@ -45,9 +45,10 @@ public class ViewDispatcher {
             layout = (BorderPane) layoutView.getView();
             //Anche in questo caso viene passato l'utente perche' nella vista di
             //benvenuto il testo varia a seconda se e' docente od user
-            renderView("home", user);
+            renderView("home-view", user);
             Scene scene = new Scene(layout);
-            scene.getStylesheets().add(getClass().getResource(RESOURCE_BASE + "styles.css").toExternalForm());
+            // qualcosa per lo stile che non funziona per motivi strani
+           // scene.getStylesheets().add(getClass().getResource(RESOURCE_BASE+"views/styles.css").toExternalForm());
 
             stage.setScene(scene);
         } catch (ViewException e) {

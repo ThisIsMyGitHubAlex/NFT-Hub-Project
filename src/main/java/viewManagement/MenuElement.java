@@ -10,7 +10,7 @@ public class MenuElement {
         this.view = view;
     }
 
-    public String getname() {
+    public String getName() {
         return name;
     }
 
@@ -18,7 +18,7 @@ public class MenuElement {
         this.name = name;
     }
 
-    public String getview() {
+    public String getView() {
         return view;
     }
 

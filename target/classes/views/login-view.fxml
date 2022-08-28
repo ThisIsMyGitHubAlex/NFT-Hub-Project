@@ -7,11 +7,12 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginViewController">
    <children>
-      <Label layoutX="221.0" layoutY="103.0" prefHeight="141.0" prefWidth="158.0" text="Login View" textAlignment="CENTER">
+      <Label layoutX="221.0" layoutY="26.0" prefHeight="141.0" prefWidth="158.0" text="Login View" textAlignment="CENTER">
          <font>
             <Font size="31.0" />
          </font>
       </Label>
-      <Button layoutX="259.0" layoutY="280.0" mnemonicParsing="false" onAction="#goToScene2" text="Go to scene 2" />
+      <Button layoutX="442.0" layoutY="282.0" mnemonicParsing="false" onAction="#goToScene2" text="Go to scene 2" />
+      <Button layoutX="91.0" layoutY="282.0" mnemonicParsing="false" onAction="#authenticateAction" text="Login" />
    </children>
 </AnchorPane>

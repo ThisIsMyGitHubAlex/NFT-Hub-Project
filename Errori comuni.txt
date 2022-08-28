@@ -1,0 +1,2 @@
+1)class controllers.HomeViewController cannot be cast to class start.DataInitializable
+1- Si verifica perché il controller non implementa DataInitializable

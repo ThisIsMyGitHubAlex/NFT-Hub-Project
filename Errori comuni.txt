@@ -1,2 +1,7 @@
 1)class controllers.HomeViewController cannot be cast to class start.DataInitializable
 1- Si verifica perché il controller non implementa DataInitializable
+2) PrintWriter.print non scrive 
+2- non scrive se non chiudi successivamente il printwriter con close() 
+3) Non trova il percorso del file
+3- I percorsi possono essere assoluti o relativi, se non si scrive il percorso completo: "C:/users/.../nomeFIle" allora cerca nella cartella corrente
+3- Ricorda di cambiare eventuali \ in / quando copi il percorso

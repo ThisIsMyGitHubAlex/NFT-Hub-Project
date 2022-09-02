@@ -1,13 +1,12 @@
 package start;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
+
 import javafx.stage.Stage;
 import viewManagement.ViewDispatcher;
 import viewManagement.ViewException;
 
-import java.io.IOException;
+import java.io.*;
 
 public class StartApplication extends Application {
     @Override
@@ -16,7 +15,8 @@ public class StartApplication extends Application {
 
     }
 
-    public static void main(String[] args) {
-        launch();
+    public static void main(String[] args) throws IOException {
+         launch();
+
     }
 }

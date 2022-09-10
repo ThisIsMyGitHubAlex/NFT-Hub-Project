@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -14,7 +16,7 @@
          <children>
             <ImageView fitHeight="85.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../Pictures/Stuff/nft-non-fungible-token-concept-with-neon-light-effect_1017-36944.jpg" />
+                  <Image url="@NftLayout.jpg" />
                </image>
             </ImageView>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NFT HUB" textAlignment="CENTER">
@@ -22,6 +24,15 @@
                   <Font name="Gabriola" size="35.0" />
                </font>
             </Text>
+            <Separator halignment="RIGHT" orientation="VERTICAL" prefHeight="86.0" prefWidth="403.0" />
+            <ImageView fitHeight="38.0" fitWidth="36.0" onMouseClicked="#logoutAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logutImage.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
          </children>
       </HBox>
    </top>

@@ -15,6 +15,7 @@ public class ViewDispatcher {
     private static final String RESOURCE_BASE = "/views/";
     private static ViewDispatcher instance = new ViewDispatcher();
 
+
     private Stage stage;
     private BorderPane layout;
 
@@ -48,7 +49,7 @@ public class ViewDispatcher {
             renderView("home-view", user);
             Scene scene = new Scene(layout);
             // qualcosa per lo stile che non funziona per motivi strani
-           // scene.getStylesheets().add(getClass().getResource(RESOURCE_BASE+"views/styles.css").toExternalForm());
+            // scene.getStylesheets().add(getClass().getResource(RESOURCE_BASE+"views/styles.css").toExternalForm());
 
             stage.setScene(scene);
         } catch (ViewException e) {
@@ -58,7 +59,7 @@ public class ViewDispatcher {
 
     public void logout() {
         try {
-            Parent loginView = loadView("login").getView();
+            Parent loginView = loadView("login-view").getView();
             Scene scene = new Scene(loginView);
             stage.setScene(scene);
         } catch (ViewException e) {

@@ -68,7 +68,7 @@ public class LayoutController implements Initializable, DataInitializable<User> 
     }
 
     @FXML
-    public void esciAction(MouseEvent event) {
+    public void logoutAction(MouseEvent event) {
         dispatcher.logout();
     }
 

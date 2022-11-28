@@ -21,9 +21,9 @@ import java.util.ResourceBundle;
 public class LayoutController implements Initializable, DataInitializable<User> {
     private static final MenuElement MENU_HOME = new MenuElement("Home", "home-view");
 
-    private static final MenuElement[] MENU_ADMIN = { new MenuElement("Profile", "2")};
+    private static final MenuElement[] MENU_ADMIN = {new MenuElement("Profile", "2")};
 
-    private static final MenuElement[] MENU_GUEST = { new MenuElement("Profile", "2")};
+    private static final MenuElement[] MENU_GUEST = {new MenuElement("Profile", "2")};
 
     @FXML
     private VBox menuBar;

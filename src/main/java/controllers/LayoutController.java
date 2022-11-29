@@ -21,10 +21,14 @@ import java.util.ResourceBundle;
 public class LayoutController implements Initializable, DataInitializable<User> {
     private static final MenuElement MENU_HOME = new MenuElement("Home", "home-view");
 
-    private static final MenuElement[] MENU_ADMIN = {new MenuElement("Profile", "2")};
+    private static final MenuElement[] MENU_ADMIN = {
+            new MenuElement("Profile", "profile-view"),
+            // TODO
+            // users list view where the admin can manipulate stuff
+            new MenuElement("Users","users-view")};
 
     private static final MenuElement[] MENU_GUEST = {
-            new MenuElement("Profile", "2"),
+            new MenuElement("Profile", "profile-view"),
             new MenuElement("Library","library-view")};
 
     @FXML

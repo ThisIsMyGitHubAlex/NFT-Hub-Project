@@ -14,9 +14,8 @@
             <Font size="31.0" />
          </font>
       </Label>
-      <Button layoutX="442.0" layoutY="282.0" mnemonicParsing="false" onAction="#goToScene2" text="Go to scene 2" />
-      <Button layoutX="91.0" layoutY="282.0" mnemonicParsing="false" onAction="#loginAction" text="Login" />
-      <Button layoutX="274.0" layoutY="282.0" mnemonicParsing="false" onAction="#RegistrationAction" text="Sign Up" />
+      <Button layoutX="152.0" layoutY="282.0" mnemonicParsing="false" onAction="#loginAction" text="Login" />
+      <Button layoutX="408.0" layoutY="282.0" mnemonicParsing="false" onAction="#RegistrationAction" text="Sign Up" />
       <TextField fx:id="usernameTextField" layoutX="226.0" layoutY="126.0" promptText="username" />
       <PasswordField fx:id="passwordTextField" layoutX="226.0" layoutY="200.0" promptText="password" />
       <Label layoutX="273.0" layoutY="101.0" text="Username" />

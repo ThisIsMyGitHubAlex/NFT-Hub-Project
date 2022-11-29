@@ -17,7 +17,7 @@
          <children>
             <ImageView fitHeight="85.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@NftLayout.jpg" />
+                  <Image url="@../data/general-use-images/NftLayout.jpg" />
                </image>
             </ImageView>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NFT HUB" textAlignment="CENTER">
@@ -31,11 +31,14 @@
             <Separator halignment="RIGHT" orientation="VERTICAL" prefHeight="85.0" prefWidth="403.0" />
             <ImageView fitHeight="38.0" fitWidth="36.0" onMouseClicked="#logoutAction" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@logutImage.png" />
+                  <Image url="@../data/general-use-images/logutImage.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
+               <HBox.margin>
+                  <Insets top="25.0" />
+               </HBox.margin>
             </ImageView>
          </children>
       </HBox>

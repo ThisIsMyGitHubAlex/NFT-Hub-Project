@@ -9,16 +9,21 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFA07A;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginViewController">
    <children>
-      <Label layoutX="224.0" layoutY="14.0" prefHeight="66.0" prefWidth="158.0" text="NFT HUB" textAlignment="CENTER">
+      <Label layoutX="223.0" layoutY="14.0" prefHeight="66.0" prefWidth="158.0" text="NFT HUB" textAlignment="CENTER">
          <font>
             <Font size="31.0" />
          </font>
       </Label>
-      <Button layoutX="152.0" layoutY="282.0" mnemonicParsing="false" onAction="#loginAction" text="Login" />
-      <Button layoutX="408.0" layoutY="282.0" mnemonicParsing="false" onAction="#RegistrationAction" text="Sign Up" />
-      <TextField fx:id="usernameTextField" layoutX="226.0" layoutY="126.0" promptText="username" />
-      <PasswordField fx:id="passwordTextField" layoutX="226.0" layoutY="200.0" promptText="password" />
-      <Label layoutX="273.0" layoutY="101.0" text="Username" />
-      <Label layoutX="273.0" layoutY="182.0" text="Password" />
+      <Button fx:id="loginButton" layoutX="148.0" layoutY="269.0" mnemonicParsing="false" onAction="#loginAction" text="Login" />
+      <Button fx:id="signUpButton" layoutX="406.0" layoutY="269.0" mnemonicParsing="false" onAction="#RegistrationAction" text="Sign Up" />
+      <TextField fx:id="usernameTextField" layoutX="223.0" layoutY="126.0" promptText="username" />
+      <PasswordField fx:id="passwordTextField" layoutX="223.0" layoutY="200.0" promptText="password" />
+      <Label layoutX="271.0" layoutY="101.0" text="Username" />
+      <Label layoutX="272.0" layoutY="182.0" text="Password" />
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="100.0" layoutY="308.0" prefHeight="74.0" prefWidth="405.0" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

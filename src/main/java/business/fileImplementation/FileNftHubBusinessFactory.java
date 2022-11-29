@@ -14,6 +14,8 @@ public class FileNftHubBusinessFactory extends NftHubFactory {
 
     private static final String REPOSITORY_BASE =
             "C:\\Users\\aless\\Desktop\\NFT_Hub\\NFT-Hub-Project\\src\\main\\resources\\data";
+
+    // TODO resolve the path problem for the file
     private static final String USER_FILE_NAME = REPOSITORY_BASE + File.separator + "users.txt";
 
     private static final String FILE =

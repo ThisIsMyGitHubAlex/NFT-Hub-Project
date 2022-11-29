@@ -1,7 +1,5 @@
 package business.fileImplementation;
 
-import business.BusinessException;
-import business.UserNotFoundException;
 import business.UserService;
 import domain.Admin;
 import domain.Guest;
@@ -84,6 +82,74 @@ public class FileUserServiceImplementation implements UserService {
             i.printStackTrace();
         }
 
+        return false;
+    }
+
+    @Override
+    public boolean resetUsername(String newUsername, String currentUsername) throws FileNotFoundException {
+        if (existenceCheck(newUsername))
+            return false;
+        BufferedReader br = new BufferedReader(new FileReader(usersFilename));
+        try {
+
+            FileData fd = FileUtility.readAllRows(usersFilename);
+            long pCounter = fd.getPositionCounter();
+            PrintWriter pw = new PrintWriter(usersFilename);
+            List<String[]> list = fd.getRows();
+            for (String[] row : list) {
+                if (row[1].equals(currentUsername)) {
+                    // substitution
+                    row[1] = newUsername;
+
+                    // reWrite the file
+                    pw.println(pCounter);
+                    for (String[] rows : fd.getRows()) {
+                        // join(char,String[]) serve a ricollegare tutte le stringhe che formano la riga
+                        pw.println(String.join(FileUtility.COLUMN_SEPARATOR, rows));
+                    }
+
+                }
+            }
+            pw.close();
+            br.close();
+
+            return true;
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
+        return false;
+    }
+
+    @Override
+    public boolean resetPassword(String newPassword, String username) throws FileNotFoundException {
+        BufferedReader br = new BufferedReader(new FileReader(usersFilename));
+        try {
+
+            FileData fd = FileUtility.readAllRows(usersFilename);
+            long pCounter = fd.getPositionCounter();
+            PrintWriter pw = new PrintWriter(usersFilename);
+            List<String[]> list = fd.getRows();
+            for (String[] row : list) {
+                if (row[1].equals(username)) {
+                    // substitution
+                    row[2] = newPassword;
+
+                    // reWrite the file
+                    pw.println(pCounter);
+                    for (String[] rows : fd.getRows()) {
+                        // join(char,String[]) serve a ricollegare tutte le stringhe che formano la riga
+                        pw.println(String.join(FileUtility.COLUMN_SEPARATOR, rows));
+                    }
+
+                }
+            }
+            pw.close();
+            br.close();
+
+            return true;
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
         return false;
     }
 }

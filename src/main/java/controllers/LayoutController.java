@@ -23,7 +23,9 @@ public class LayoutController implements Initializable, DataInitializable<User> 
 
     private static final MenuElement[] MENU_ADMIN = {new MenuElement("Profile", "2")};
 
-    private static final MenuElement[] MENU_GUEST = {new MenuElement("Profile", "2")};
+    private static final MenuElement[] MENU_GUEST = {
+            new MenuElement("Profile", "2"),
+            new MenuElement("Library","library-view")};
 
     @FXML
     private VBox menuBar;

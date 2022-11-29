@@ -5,6 +5,6 @@
 
 <AnchorPane prefHeight="315.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeViewController">
    <children>
-      <Label fx:id="homeLabel" prefHeight="18.0" text="Wellcome Label" textAlignment="CENTER" />
+      <Label fx:id="homeLabel" prefHeight="18.0" text="Welcome Label" textAlignment="CENTER" />
    </children>
 </AnchorPane>

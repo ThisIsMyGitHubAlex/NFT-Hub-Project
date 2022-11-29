@@ -40,25 +40,21 @@ public class LoginViewController implements DataInitializable<User>, Initializab
 
     }
 
+    // @TODO OPTIMIZATION
+    // Write the binding on the login button for no useless checks
 
-    public void goToScene2() {
-
-        Guest g = new Guest("a", "a");
-        ViewDispatcher.getInstance().loggedIn(g);
-        ViewDispatcher.getInstance().renderView("2", g);
-    }
 
     public void loginAction() throws BusinessException, IOException {
-        User user = userService.authenticate(usernameTextField.getText(),passwordTextField.getText());
-        if(user != null)
-        dispatcher.loggedIn(user);
-        else System.out.println("Username o password errati");
+        User user = userService.authenticate(usernameTextField.getText(), passwordTextField.getText());
+        if (user != null)
+            dispatcher.loggedIn(user);
+        else System.out.println("Wrong Username or Password");
     }
 
     public void RegistrationAction() throws IOException {
-        String username= usernameTextField.getText();
-        String password= passwordTextField.getText();
-        userService.signUp(username,password);
+        String username = usernameTextField.getText();
+        String password = passwordTextField.getText();
+        userService.signUp(username, password);
 
     }
 

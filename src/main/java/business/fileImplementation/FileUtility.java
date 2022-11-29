@@ -27,17 +27,17 @@ public class FileUtility {
         BufferedReader br = new BufferedReader(new FileReader(fileNamePath));
         String row = null;
         List<String[]> rows = new ArrayList<>();
-        // nella prima riga del file c'è scritto il contatore
-        // quindi lo andiamo a leggere come stringa e lo convertiamo a nummero
+        // the counter is written in the first line of the file
+        // so we read it as a string and convert it to a number
         long positionCounter = Long.parseLong(br.readLine());
         fileData.setPositionCounter(positionCounter);
 
-        // fino a quando ci sono righe scritte
+        // as long as there are lines written
         while ((row = br.readLine()) != null) {
-            // aggiungi ogni riga alla lista delle righe separando Stringa per stringa tramite il separatore
+            // add each line to the linelist by separating string by string by the separator
             rows.add(trim(row.split(COLUMN_SEPARATOR)));
         }
-        // inserisco le righe nel filedata
+        // put the lines in filedata
         fileData.setRows(rows);
         return fileData;
     }

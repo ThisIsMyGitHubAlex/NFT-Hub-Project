@@ -8,8 +8,12 @@ import java.io.File;
 public class FileNftHubBusinessFactory extends NftHubFactory {
 
     private UserService userService;
-    private static final String REPOSITORY_BASE =
-            "C:\\Users\\aless\\Desktop\\NFT_Hub\\NFT-Hub-Project\\src\\main\\resources\\data";
+
+    private static final String REPOSITORY_BASE = "src" + File.separator + "main" + File.separator + "resources"
+            + File.separator + "data";
+
+
+
 
     private static final String USER_FILE_NAME = REPOSITORY_BASE + File.separator + "users";
 

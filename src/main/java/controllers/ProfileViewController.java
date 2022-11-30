@@ -5,6 +5,7 @@ import business.UserService;
 import domain.User;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -31,6 +32,11 @@ public class ProfileViewController implements Initializable, DataInitializable<U
     private ImageView imageField;
     @FXML
     private Label alertLabel;
+    @FXML
+    private Button resetUsernameButton;
+    @FXML
+    private Button resetPasswordButton;
+
 
     private UserService userService;
 
@@ -60,6 +66,10 @@ public class ProfileViewController implements Initializable, DataInitializable<U
 
         NftHubFactory factory = NftHubFactory.getInstance();
         userService = factory.getUserService();
+
+        resetUsernameButton.disableProperty().bind(
+                usernameField.textProperty().isEmpty());
+        resetPasswordButton.disableProperty().bind(passwordField.textProperty().isEmpty());
     }
 
     public void resetUsername() throws FileNotFoundException {

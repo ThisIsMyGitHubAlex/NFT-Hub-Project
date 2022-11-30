@@ -45,7 +45,7 @@ public class ViewDispatcher {
 
             layout = (BorderPane) layoutView.getView();
             //Anche in questo caso viene passato l'utente perche' nella vista di
-            //benvenuto il testo varia a seconda se e' docente od user
+            //benvenuto il testo varia a seconda se e' docente o user
             renderView("home-view", user);
             Scene scene = new Scene(layout);
             // qualcosa per lo stile che non funziona per motivi strani

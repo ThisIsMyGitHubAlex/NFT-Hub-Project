@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NFT Hub.iml" filepath="$PROJECT_DIR$/NFT Hub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NFT_Hub.iml" filepath="$PROJECT_DIR$/NFT_Hub.iml" />
     </modules>
   </component>
 </project>

@@ -11,14 +11,13 @@ import java.util.ResourceBundle;
 
 public class LibraryViewController implements Initializable, DataInitializable<User> {
 
-    @FXML
-    private Label titleLabel;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
     }
 
     public void initializeData(User user) {
-        titleLabel.setText(user.getUsername() + "'s Library");
+
     }
 }

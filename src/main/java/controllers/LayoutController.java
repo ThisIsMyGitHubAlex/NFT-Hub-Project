@@ -29,7 +29,9 @@ public class LayoutController implements Initializable, DataInitializable<User> 
 
     private static final MenuElement[] MENU_GUEST = {
             new MenuElement("Profile", "profile-view"),
-            new MenuElement("Library","library-view")};
+            new MenuElement("Library","library-view"),
+            new MenuElement("The Shop","Shop-view")};
+
 
     @FXML
     private VBox menuBar;
@@ -66,7 +68,7 @@ public class LayoutController implements Initializable, DataInitializable<User> 
         button.setStyle("-fx-background-color: transparent; -fx-font-size: 14;");
         button.setTextFill(Paint.valueOf("white"));
         button.setPrefHeight(10);
-        button.setPrefWidth(180);
+        button.setPrefWidth(85);
         button.setOnAction((ActionEvent event) -> {
             dispatcher.renderView(viewItem.getView(), user);
         });

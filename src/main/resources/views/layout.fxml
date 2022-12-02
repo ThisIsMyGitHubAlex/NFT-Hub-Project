@@ -2,33 +2,29 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LayoutController">
    <top>
-      <HBox prefHeight="85.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+      <HBox prefHeight="85.0" prefWidth="600.0" style="-fx-background-color: #FFA07A;" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="85.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../data/general-use-images/NftLayout.jpg" />
                </image>
             </ImageView>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NFT HUB" textAlignment="CENTER">
-               <font>
-                  <Font name="Gabriola" size="35.0" />
-               </font>
+            <ImageView fitHeight="85.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../data/general-use-images/nft-hub-logo.png" />
+               </image>
                <HBox.margin>
-                  <Insets left="180.0" top="25.0" />
+                  <Insets left="180.0" />
                </HBox.margin>
-            </Text>
-            <Separator halignment="RIGHT" orientation="VERTICAL" prefHeight="85.0" prefWidth="403.0" />
+            </ImageView>
             <ImageView fitHeight="38.0" fitWidth="36.0" onMouseClicked="#logoutAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../data/general-use-images/logutImage.png" />
@@ -37,13 +33,13 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
                <HBox.margin>
-                  <Insets top="25.0" />
+                  <Insets left="210.0" top="25.0" />
                </HBox.margin>
             </ImageView>
          </children>
       </HBox>
    </top>
    <left>
-      <VBox fx:id="menuBar" prefWidth="85.0" style="-fx-background-color: #aee627;" BorderPane.alignment="CENTER" />
+      <VBox fx:id="menuBar" prefWidth="85.0" style="-fx-background-color: #FFA07A;" BorderPane.alignment="CENTER" />
    </left>
 </BorderPane>

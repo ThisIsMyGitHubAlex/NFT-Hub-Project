@@ -4,26 +4,40 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFA07A;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginViewController">
    <children>
-      <Label layoutX="223.0" layoutY="14.0" prefHeight="66.0" prefWidth="158.0" text="NFT HUB" textAlignment="CENTER">
+      <Button fx:id="loginButton" layoutX="100.0" layoutY="277.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="35.0" prefWidth="107.0" text="Login">
          <font>
-            <Font size="31.0" />
-         </font>
-      </Label>
-      <Button fx:id="loginButton" layoutX="148.0" layoutY="269.0" mnemonicParsing="false" onAction="#loginAction" text="Login" />
-      <Button fx:id="signUpButton" layoutX="406.0" layoutY="269.0" mnemonicParsing="false" onAction="#RegistrationAction" text="Sign Up" />
-      <TextField fx:id="usernameTextField" layoutX="223.0" layoutY="126.0" promptText="username" />
-      <PasswordField fx:id="passwordTextField" layoutX="223.0" layoutY="200.0" promptText="password" />
-      <Label layoutX="271.0" layoutY="101.0" text="Username" />
-      <Label layoutX="272.0" layoutY="182.0" text="Password" />
-      <Label fx:id="errorLabel" alignment="CENTER" layoutX="100.0" layoutY="308.0" prefHeight="74.0" prefWidth="405.0" textAlignment="CENTER">
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="signUpButton" layoutX="398.0" layoutY="277.0" mnemonicParsing="false" onAction="#RegistrationAction" prefHeight="35.0" prefWidth="107.0" text="Sign Up">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <TextField fx:id="usernameTextField" layoutX="222.0" layoutY="162.0" prefHeight="35.0" prefWidth="158.0" promptText="username" />
+      <PasswordField fx:id="passwordTextField" layoutX="222.0" layoutY="237.0" prefHeight="35.0" prefWidth="158.0" promptText="password" />
+      <Label alignment="CENTER" layoutX="248.0" layoutY="127.0" text="Username" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="252.0" layoutY="201.0" text="Password">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="99.0" layoutY="325.0" prefHeight="74.0" prefWidth="405.0" textAlignment="CENTER">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
+      <ImageView fitHeight="154.0" fitWidth="172.0" layoutX="225.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../data/general-use-images/nft-hub-logo.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

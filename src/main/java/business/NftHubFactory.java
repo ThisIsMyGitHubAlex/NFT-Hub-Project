@@ -11,4 +11,5 @@ public abstract class NftHubFactory {
     }
 
     public abstract UserService getUserService();
+    public abstract NftService getNftService();
 }

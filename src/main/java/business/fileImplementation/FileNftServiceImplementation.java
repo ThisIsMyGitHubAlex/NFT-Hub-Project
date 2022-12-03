@@ -9,7 +9,7 @@ public class FileNftServiceImplementation implements NftService {
         this.imageCounterFilename = imageCounterFilename;
     }
 
-    // TODO Scrivere il metodo che ritorna il numero di immagini presenti
+    // TODO Write the method that returns the number of images present
     @Override
     public int getImageCounter() {
         return 0;

@@ -23,14 +23,15 @@ public class LayoutController implements Initializable, DataInitializable<User> 
 
     private static final MenuElement[] MENU_ADMIN = {
             new MenuElement("Profile", "profile-view"),
-            // TODO
-            // users list view where the admin can manipulate stuff
-            new MenuElement("Users","users-view")};
+            new MenuElement("Users", "userlist-view"),
+            new MenuElement("Library", "library-view"),
+            new MenuElement("The Shop", "Shop-view")};
+
 
     private static final MenuElement[] MENU_GUEST = {
             new MenuElement("Profile", "profile-view"),
-            new MenuElement("Library","library-view"),
-            new MenuElement("The Shop","Shop-view")};
+            new MenuElement("Library", "library-view"),
+            new MenuElement("The Shop", "Shop-view")};
 
 
     @FXML

@@ -1,5 +1,6 @@
 package start;
 
+
 public interface DataInitializable<T> {
     /*
      * Implementato come metodo di default in modo tale che i controllori che

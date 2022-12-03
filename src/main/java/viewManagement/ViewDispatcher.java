@@ -72,7 +72,6 @@ public class ViewDispatcher {
             View<T> view = loadView(viewName);
             DataInitializable<T> controller = view.getController();
             controller.initializeData(data);
-            // RICORDA: il problema sta in LoggedIn() perché anora non hai strutturato il domain con "studente/docente"
             layout.setCenter(view.getView());
         } catch (ViewException e) {
             renderError(e);

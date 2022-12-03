@@ -33,7 +33,7 @@ public class ShopViewController implements Initializable, DataInitializable<User
     @Override
     public void initializeData(User user) {
         imagesCounter = nftService.getImageCounter();
-        // TODO aggiungere immagini alla tabella
+        // TODO add images to the table
 
         /* ImageView imageView=null;
         for(int i=0; i<imagesCounter;i++){

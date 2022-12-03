@@ -1,11 +1,13 @@
 package business.fileImplementation;
 
+import business.BusinessException;
 import business.UserService;
 import domain.Admin;
 import domain.Guest;
 import domain.User;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class FileUserServiceImplementation implements UserService {
@@ -25,12 +27,19 @@ public class FileUserServiceImplementation implements UserService {
             if (row[1].equals(username) && row[2].equals(password)) {
 
                 if (row[3].equals("Guest")) {
-                    User user = new Guest(username, password);
+                    User user =new Guest();
+                    user.setUsername(row[1]);
+                    user.setPassword(row[2]);
+                    user.setRole(row[3]);
+
                     return user;
                 }
 
                 if (row[3].equals("Admin")) {
-                    User user = new Admin(username, password);
+                    User user =new Admin();
+                    user.setUsername(row[1]);
+                    user.setPassword(row[2]);
+                    user.setRole(row[3]);
                     return user;
                 }
             }
@@ -151,5 +160,30 @@ public class FileUserServiceImplementation implements UserService {
             i.printStackTrace();
         }
         return false;
+    }
+
+
+    @Override
+    public List<User> getUserList() throws BusinessException {
+
+        List<User> userList = new ArrayList<>();
+        try {
+            FileData fd = FileUtility.readAllRows(usersFilename);
+            List<String[]> rows = fd.getRows();
+
+            for (String[] row : rows) {
+                if(row[3].equals("Guest")){
+                User user= new Guest();
+                user.setUsername(row[1]);
+                user.setPassword(row[2]);
+                user.setRole(row[3]);
+                userList.add(user);}
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new BusinessException(e);
+        }
+        return userList;
     }
 }

@@ -98,10 +98,11 @@ public class FileUserServiceImplementation implements UserService {
     public boolean resetUsername(String newUsername, String currentUsername) throws FileNotFoundException {
         if (existenceCheck(newUsername))
             return false;
-        BufferedReader br = new BufferedReader(new FileReader(usersFilename));
+
         try {
 
             FileData fd = FileUtility.readAllRows(usersFilename);
+            BufferedReader br = new BufferedReader(new FileReader(usersFilename));
             long pCounter = fd.getPositionCounter();
             PrintWriter pw = new PrintWriter(usersFilename);
             List<String[]> list = fd.getRows();
@@ -122,6 +123,7 @@ public class FileUserServiceImplementation implements UserService {
             pw.close();
             br.close();
 
+
             return true;
         } catch (IOException i) {
             i.printStackTrace();
@@ -131,10 +133,10 @@ public class FileUserServiceImplementation implements UserService {
 
     @Override
     public boolean resetPassword(String newPassword, String username) throws FileNotFoundException {
-        BufferedReader br = new BufferedReader(new FileReader(usersFilename));
-        try {
 
+        try {
             FileData fd = FileUtility.readAllRows(usersFilename);
+            BufferedReader br = new BufferedReader(new FileReader(usersFilename));
             long pCounter = fd.getPositionCounter();
             PrintWriter pw = new PrintWriter(usersFilename);
             List<String[]> list = fd.getRows();

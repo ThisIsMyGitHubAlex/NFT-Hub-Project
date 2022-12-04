@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="315.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LibraryViewController">
    <children>
-      <Label layoutX="182.0" layoutY="20.0" text="My Library">
+      <Label layoutX="164.0" layoutY="14.0" text="My Library">
          <font>
             <Font name="MV Boli" size="36.0" />
          </font>
       </Label>
+      <TableView layoutX="69.0" layoutY="84.0" prefHeight="200.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="NFT" />
+          <TableColumn prefWidth="75.0" text="Name" />
+            <TableColumn prefWidth="75.0" text="Price" />
+            <TableColumn prefWidth="75.0" text="on Sale" />
+            <TableColumn prefWidth="75.0" text="Manage" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

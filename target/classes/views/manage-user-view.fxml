@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="315.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ManageUserViewController">
+   <children>
+      <Label fx:id="titleLabel" alignment="CENTER" layoutX="230.0" layoutY="14.0" text="Label" textAlignment="CENTER">
+         <font>
+            <Font name="MV Boli" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameField" layoutX="58.0" layoutY="110.0" />
+      <TextField fx:id="passwordField" layoutX="58.0" layoutY="181.0" />
+      <Label layoutX="105.0" layoutY="82.0" text="Username" />
+      <Label layoutX="106.0" layoutY="158.0" text="Password" />
+      <ImageView fitHeight="43.0" fitWidth="54.0" layoutX="447.0" layoutY="14.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../data/general-use-images/goBack.png" />
+         </image>
+      </ImageView>
+      <Button alignment="CENTER" layoutX="224.0" layoutY="108.0" mnemonicParsing="false" onAction="#resetUsername" text="Reset Username" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="224.0" layoutY="179.0" mnemonicParsing="false" onAction="#resetPassword" prefHeight="30.0" prefWidth="119.0" text="Reset Password" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="operationResultLabel" alignment="CENTER" layoutX="37.0" layoutY="246.0" prefHeight="27.0" prefWidth="442.0" text="Label" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

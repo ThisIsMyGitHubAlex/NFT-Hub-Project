@@ -38,8 +38,6 @@ public class ManageUserViewController implements Initializable, DataInitializabl
     }
 
 
-
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -59,15 +57,16 @@ public class ManageUserViewController implements Initializable, DataInitializabl
     }
 
 
-    // TODO resolve the problem of... passing the admin?
+    // TODO resolve the problem of... passing the admin?, is this really solved?
     public void goBack() {
-        dispatcher.renderView("userlist-view", null);
+        dispatcher.renderView("userlist-view", new User());
     }
 
     public void resetUsername() {
         try {
             if (userService.resetUsername(usernameField.getText(), user.getUsername())) {
                 operationResultLabel.setText("Username Resetted");
+                user.setUsername(usernameField.getText());
             } else
                 operationResultLabel.setText("This Username is invalid or already exist ");
         } catch (FileNotFoundException e) {
@@ -78,8 +77,9 @@ public class ManageUserViewController implements Initializable, DataInitializabl
     public void resetPassword() {
         try {
             if (userService.resetPassword(passwordField.getText(), user.getUsername())) {
+                user.setPassword(passwordField.getText());
                 operationResultLabel.setText("Password Resetted");
-            }else
+            } else
                 operationResultLabel.setText("Operation Failed");
         } catch (FileNotFoundException e) {
             e.printStackTrace();

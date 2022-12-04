@@ -40,11 +40,11 @@ public class ProfileViewController implements Initializable, DataInitializable<U
 
     private UserService userService;
 
-    private User thisUser;
+    private User user;
 
     @Override
     public void initializeData(User user) {
-        thisUser = user;
+        this.user = user;
         usernameField.setPromptText(user.getUsername());
         // method for not showing the password but only the "*"
         StringBuffer passPrivacy = new StringBuffer();
@@ -74,13 +74,17 @@ public class ProfileViewController implements Initializable, DataInitializable<U
 
     public void resetUsername() throws FileNotFoundException {
 
-        if (userService.resetUsername(usernameField.getText(), thisUser.getUsername()))
+        if (userService.resetUsername(usernameField.getText(), user.getUsername())) {
             alertLabel.setText("successful operation");
+            user.setUsername(usernameField.getText());
+        }
         else alertLabel.setText("This username already Exist, try another");
     }
 
     public void resetPassword() throws FileNotFoundException {
-        if (userService.resetPassword(passwordField.getText(), thisUser.getUsername()))
+        if (userService.resetPassword(passwordField.getText(), user.getUsername())) {
             alertLabel.setText("successful operation");
+            user.setPassword(usernameField.getText());
+        }
     }
 }

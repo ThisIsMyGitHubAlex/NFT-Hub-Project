@@ -47,13 +47,14 @@ public class UserListViewController implements Initializable, DataInitializable<
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         usernameColumn.setCellValueFactory(new PropertyValueFactory<>("Username"));
+        usernameColumn.setStyle("-fx-alignment: CENTER;");
         roleColumn.setCellValueFactory(new PropertyValueFactory<>("Role"));
+        roleColumn.setStyle("-fx-alignment: CENTER;");
         // button column
         manageColumn.setStyle("-fx-alignment: CENTER;");
         manageColumn.setCellValueFactory((TableColumn.CellDataFeatures<User, Button> param) -> {
             final Button manageButton = new Button("Manage");
             manageButton.setOnAction((ActionEvent event) -> {
-                // TODO create the manage view
                 dispatcher.renderView("manage-user-view", param.getValue());
             });
 

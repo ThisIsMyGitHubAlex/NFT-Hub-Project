@@ -1,7 +1,10 @@
 1)class controllers.HomeViewController cannot be cast to class start.DataInitializable
-1- Si verifica perché il controller non implementa DataInitializable
-2) PrintWriter.print non scrive 
-2- non scrive se non chiudi successivamente il printwriter con close() 
-3) Non trova il percorso del file
-3- I percorsi possono essere assoluti o relativi, se non si scrive il percorso completo: "C:/users/.../nomeFIle" allora cerca nella cartella corrente
-3- Ricorda di cambiare eventuali \ in / quando copi il percorso
+1- Occurs because the controller does not implement DataInitializable
+2) PrintWriter.print does not write
+2- it doesn't write if you don't close the printwriter afterwards with close()
+3) Can't find the file path
+3- Paths can be absolute or relative,
+if you don't write the full path: "C:/users/.../filename" then look in the current folder
+3- Remember to change any \ to / when copying the path
+4) the table can scroll by a few pixels despite the fact that the sum of the columns is correct
+4- Add 2 pexels in the tabel width layout or use Computed size

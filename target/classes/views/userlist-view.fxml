@@ -6,19 +6,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="315.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UserListViewController">
+<AnchorPane prefHeight="315.0" prefWidth="515.0" style="-fx-background-color: #B0E0E6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UserListViewController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="206.0" layoutY="14.0" text="User List" textAlignment="CENTER">
          <font>
             <Font name="MV Boli" size="24.0" />
          </font>
       </Label>
-      <TableView fx:id="userTable" layoutX="145.0" layoutY="101.0" prefHeight="200.0" prefWidth="225.0">
+      <TableView fx:id="userTable" layoutX="120.0" layoutY="76.0" prefHeight="200.0">
         <columns>
-          <TableColumn fx:id="usernameColumn" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" text="Username" />
-          <TableColumn fx:id="roleColumn" minWidth="50.0" prefWidth="-1.0" text="Role" />
-            <TableColumn fx:id="manageColumn" minWidth="75.0" prefWidth="-1.0" text="Manage" />
+          <TableColumn fx:id="usernameColumn" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="-1.0" text="Username" />
+          <TableColumn fx:id="roleColumn" minWidth="75.0" prefWidth="-1.0" text="Role" />
+            <TableColumn fx:id="manageColumn" minWidth="100.0" prefWidth="-1.0" text="Manage" />
         </columns>
       </TableView>
    </children>

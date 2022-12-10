@@ -56,8 +56,6 @@ public class ManageUserViewController implements Initializable, DataInitializabl
         passwordField.setPromptText(passPrivacy.toString());
     }
 
-
-    // TODO resolve the problem of... passing the admin?, is this really solved?
     public void goBack() {
         dispatcher.renderView("userlist-view", new User());
     }

@@ -3,31 +3,35 @@ package domain;
 import javafx.scene.image.ImageView;
 
 public class NFT {
-    // TODO setup the librery table IDK how jut try it
+    // TODO setup the library table IDK how just try it
     private ImageView image;
     private String name;
     private double price;
-    private User owner;
     private String onSale;
+    private String ownerUsername;
 
-    private enum myEnumeration {
+    /*private enum myEnumeration {
         YES, NO
+    }*/
+
+
+    public void setOnSale(String s) {
+        this.onSale = s;
     }
-
-
-    private ImageView getImage() {
-        return image;
-    }
-
-    private void setImage(ImageView image) {
-        this.image = image;
-    }
-
 
     public String getOnSale() {
         return onSale;
     }
 
+    public ImageView getImage() {
+        return image;
+    }
+
+    public void setImage(ImageView image) {
+        this.image = image;
+    }
+
+    /*
     public void setOnSaleYES() {
         onSale = myEnumeration.YES.toString();
     }
@@ -35,10 +39,17 @@ public class NFT {
     public void setOnSaleNO() {
         onSale = myEnumeration.NO.toString();
     }
+    */
 
-    public void setOwner(User owner) {
-        this.owner = owner;
+
+    public String getOwnerUsername() {
+        return ownerUsername;
     }
+
+    public void setOwnerUsername(String ownerUsername) {
+        this.ownerUsername = ownerUsername;
+    }
+
 
     public void setPrice(double price) {
         this.price = price;
@@ -52,13 +63,9 @@ public class NFT {
         this.name = name;
     }
 
-
     public double getPrice() {
         return this.price;
     }
 
-    public User getOwner() {
-        return this.owner;
-    }
 
 }

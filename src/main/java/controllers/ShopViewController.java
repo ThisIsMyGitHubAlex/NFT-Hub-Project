@@ -1,5 +1,6 @@
 package controllers;
 
+import business.BusinessException;
 import business.NftHubFactory;
 import business.NftService;
 import business.UserService;
@@ -18,7 +19,6 @@ public class ShopViewController implements Initializable, DataInitializable<User
 
     private int imagesCounter;
 
-    private NftHubFactory factory;
     private UserService userService;
     private NftService nftService;
 
@@ -32,15 +32,18 @@ public class ShopViewController implements Initializable, DataInitializable<User
 
     @Override
     public void initializeData(User user) {
-        imagesCounter = nftService.getImageCounter();
-        // TODO add images to the table
+        try {
+            imagesCounter = nftService.getImageCounter();
+            System.out.println("i got the counter: " + imagesCounter);
+            // TODO add images to the table
 
         /* ImageView imageView=null;
         for(int i=0; i<imagesCounter;i++){
         nftTable.getChildrenUnmodifiable().add(imageView.setImage(););
         }
         */
-
+        } catch (BusinessException businessException) {
+        }
 
     }
 }

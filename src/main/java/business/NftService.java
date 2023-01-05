@@ -8,6 +8,6 @@ import java.util.List;
 public interface NftService {
 
      int getImageCounter() throws BusinessException;
-     List<NFT> getNftList() throws BusinessException;
+     List<NFT> getNftListByUser(String username) throws BusinessException;
 
 }

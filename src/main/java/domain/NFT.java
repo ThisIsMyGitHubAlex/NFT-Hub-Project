@@ -4,7 +4,7 @@ import javafx.scene.image.ImageView;
 
 public class NFT {
     // TODO setup the library table IDK how just try it
-    private ImageView image;
+    private ImageView imageView;
     private String name;
     private double price;
     private String onSale;
@@ -23,12 +23,12 @@ public class NFT {
         return onSale;
     }
 
-    public ImageView getImage() {
-        return image;
+    public ImageView getImageView() {
+        return imageView;
     }
 
-    public void setImage(ImageView image) {
-        this.image = image;
+    public void setImageView(ImageView imageView) {
+        this.imageView = imageView;
     }
 
     /*

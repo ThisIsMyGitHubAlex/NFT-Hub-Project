@@ -3,7 +3,6 @@ package controllers;
 import business.BusinessException;
 import business.NftHubFactory;
 import business.NftService;
-import business.UserService;
 import domain.NFT;
 import domain.User;
 import javafx.beans.property.SimpleObjectProperty;
@@ -49,21 +48,22 @@ public class LibraryViewController implements Initializable, DataInitializable<U
     public LibraryViewController() {
         dispatcher = ViewDispatcher.getInstance();
         NftHubFactory factory = NftHubFactory.getInstance();
-         this.nftService = factory.getNftService();
+        this.nftService = factory.getNftService();
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        imageColumn.setCellValueFactory(new PropertyValueFactory<>("NFT"));
+        // The string that are passed in PropertyValueFactory are the same of the class NFT
+        imageColumn.setCellValueFactory(new PropertyValueFactory<>("imageView"));
         imageColumn.setStyle("-fx-alignment: CENTER;");
-        nameColumn.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         nameColumn.setStyle("-fx-alignment: CENTER;");
-        priceColumn.setCellValueFactory(new PropertyValueFactory<>("Price"));
+        priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
         priceColumn.setStyle("-fx-alignment: CENTER;");
-        onSaleColumn.setCellValueFactory(new PropertyValueFactory<>("On Sale"));
+        onSaleColumn.setCellValueFactory(new PropertyValueFactory<>("onSale"));
         onSaleColumn.setStyle("-fx-alignment: CENTER;");
-        ownerColumn.setCellValueFactory(new PropertyValueFactory<>("Owner"));
+        ownerColumn.setCellValueFactory(new PropertyValueFactory<>("ownerUsername"));
         ownerColumn.setStyle("-fx-alignment: CENTER;");
         // button column
         manageColumn.setStyle("-fx-alignment: CENTER;");
@@ -83,9 +83,9 @@ public class LibraryViewController implements Initializable, DataInitializable<U
         this.user = user;
         try {
             int imagesCounter = nftService.getImageCounter();
-            System.out.println("i got the counter: "+ imagesCounter);
+            System.out.println("i got the counter: " + imagesCounter);
 
-            List<NFT> NftList = nftService.getNftList();
+            List<NFT> NftList = nftService.getNftListByUser(user.getUsername());
             // This is necessary because setItems require an ObservableList as a parameter
             // This is how to convert a list into a ObservableList
 
